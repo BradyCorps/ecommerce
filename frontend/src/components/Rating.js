@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Rating = ({ value, text, color }) => {
 	return (
@@ -68,6 +67,7 @@ const Rating = ({ value, text, color }) => {
 				></i>
 			</span>
 			{/* double ampersand === if text ... text exists ... show text  */}
+
 			<span className="px-2">{text && text}</span>
 		</div>
 	);
@@ -76,13 +76,6 @@ const Rating = ({ value, text, color }) => {
 // Setting default Prop value
 Rating.defaultProps = {
 	color: '#64b498',
-};
-
-// Specifying type of each prop
-Rating.propTypes = {
-	value: PropTypes.number.isRequired,
-	text: PropTypes.string.isRequired,
-	color: PropTypes.string,
 };
 
 export default Rating;

@@ -1,5 +1,10 @@
-const express = require('express'); // Traditional Syntax for Node.JS --> with node 14.4 can use ES modules w/o bable
-const products = require('./data/products');
+import express from 'express';
+import dotenv from 'dotenv';
+import products from './data/products.js'; // ES6 modules need .js suffix
+
+// Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
+dotenv.config();
+
 const app = express();
 
 app.get('/', (req, res) => {
@@ -13,4 +18,9 @@ app.get('/api/products/:id', (req, res) => {
 	res.json(product);
 });
 
-app.listen(5000, console.log('Port 5000'));
+const PORT = process.env.PORT || 5000;
+
+app.listen(
+	PORT,
+	console.log(`Server in ${process.env.NODE_ENV} mode on ${PORT}`)
+);
