@@ -7,7 +7,7 @@ const products = [
 		category: 'Landscape',
 		takenOn: 'Nikon D5300',
 		price: '89.99',
-		countInStock: 3,
+		countInStock: 0,
 		rating: 5,
 		numReviews: 4,
 	},
