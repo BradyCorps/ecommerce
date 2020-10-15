@@ -1,6 +1,7 @@
+// Future considerations --> MongoDB automatically creates _ID field --> no need to unique identifier in js data
+
 const products = [
 	{
-		_id: '1',
 		name: 'Floe Lake',
 		image: '/images/placeholder.jpg',
 		description: 'Captured in the crisp mountain air of BC',
@@ -12,7 +13,6 @@ const products = [
 		numReviews: 4,
 	},
 	{
-		_id: '2',
 		name: 'Winnipeg',
 		image: '/images/placeholder1.jpg',
 		description: 'Along the banks of the Red River',
@@ -24,7 +24,6 @@ const products = [
 		numReviews: 2,
 	},
 	{
-		_id: '3',
 		name: 'Black Lake',
 		image: '/images/placeholder2.jpg',
 		description: 'Along the ancient mountains of Nopiming',
@@ -36,7 +35,6 @@ const products = [
 		numReviews: 1,
 	},
 	{
-		_id: '4',
 		name: 'McGillvray Falls',
 		image: '/images/placeholder3.png',
 		description: 'Overlooking an autumn valley',
@@ -48,7 +46,6 @@ const products = [
 		numReviews: 4,
 	},
 	{
-		_id: '5',
 		name: 'Floe Lake 2',
 		image: '/images/placeholder4.jpg',
 		description: 'Captured in the crisp mountain air of BC',
@@ -60,7 +57,6 @@ const products = [
 		numReviews: 4,
 	},
 	{
-		_id: '6',
 		name: 'Black Lake',
 		image: '/images/placeholder5.jpg',
 		description: 'Along the banks of Black Lake',
