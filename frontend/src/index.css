@@ -9,3 +9,12 @@ h3 {
 .rating span {
 	margin: 0.1rem;
 }
+
+.image-container {
+	height: auto;
+	width: 100%;
+}
+
+.image-wrapper {
+	border: 2px solid rgb(65, 67, 82);
+}
