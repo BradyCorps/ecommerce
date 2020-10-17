@@ -7,8 +7,12 @@ import {
 	PRODUCT_LIST_REQUEST,
 	PRODUCT_LIST_SUCCESS,
 	PRODUCT_LIST_FAIL,
+	PRODUCT_DETAILS_REQUEST,
+	PRODUCT_DETAILS_SUCCESS,
+	PRODUCT_DETAILS_FAIL,
 } from '../constants/productConstants';
 
+// Essentailly homePage product list Reducer
 export const productListReducer = (state = { products: [] }, action) => {
 	// evaluate type in action --> use switch
 	switch (action.type) {
@@ -27,6 +31,27 @@ export const productListReducer = (state = { products: [] }, action) => {
 		//
 		case PRODUCT_LIST_FAIL:
 			// sends error in the state with payload after failed load attempt
+			return { loading: false, error: action.payload };
+		//
+		default:
+			return state;
+	}
+};
+
+// Product Details Page reducer
+export const productDetailsReducer = (
+	state = { product: { reviews: [] } },
+	action
+) => {
+	switch (action.type) {
+		case PRODUCT_DETAILS_REQUEST:
+			// Whatever is in state --> spread across object and make loading true
+			return { loading: true, ...state };
+		//
+		case PRODUCT_DETAILS_SUCCESS:
+			return { loading: false, product: action.payload };
+		//
+		case PRODUCT_DETAILS_FAIL:
 			return { loading: false, error: action.payload };
 		//
 		default:
