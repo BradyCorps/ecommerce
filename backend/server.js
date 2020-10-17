@@ -4,7 +4,7 @@ import colors from 'colors';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import connectDB from './config/db.js';
 
-import productRoutes from './routes/prodcutRoutes.js';
+import productRoutes from './routes/productRoutes.js';
 
 // Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
 dotenv.config();

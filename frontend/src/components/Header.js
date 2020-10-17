@@ -18,7 +18,7 @@ const Header = () => {
 							</Nav.Link>
 						</LinkContainer>
 
-						<LinkContainer to="/card">
+						<LinkContainer to="/cart">
 							<Nav.Link>
 								<i className="fas fa-shopping-cart px-1"></i>Cart
 							</Nav.Link>
