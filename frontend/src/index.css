@@ -2,6 +2,23 @@ main {
 	min-height: 80vh;
 }
 
+h1 {
+	font-size: 1.8rem;
+	padding: 1rem 0;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+
+h2 {
+	font-size: 1.4rem;
+	padding: 0.5rem 0;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+}
+
+.align {
+	text-align: center;
+}
 h3 {
 	padding: 1rem 0;
 }
@@ -17,4 +34,20 @@ h3 {
 
 .image-wrapper {
 	border: 2px solid rgb(65, 67, 82);
+}
+
+.title:hover {
+	text-decoration: none;
+	background: none;
+}
+
+.btn-hover-color:hover {
+	color: white;
+	background-color: rgb(23, 55, 71);
+}
+
+.zoom-hover:hover {
+	color: white;
+	font-size: 1.6rem;
+	transition: all 0.5s ease-in-out;
 }

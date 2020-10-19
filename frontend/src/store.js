@@ -5,6 +5,7 @@ import {
 	productListReducer,
 	productDetailsReducer,
 } from './reducers/productReducers';
+import { cartReducer } from './reducers/cartReducers';
 
 // reducers to go here
 const reducer = combineReducers({
@@ -12,10 +13,17 @@ const reducer = combineReducers({
 	//
 	productList: productListReducer,
 	productDetails: productDetailsReducer,
+	cart: cartReducer,
 });
 
 // Used when store loads intially
-const initialState = {};
+const cartItemsFromStorage = localStorage.getItem('cartItems')
+	? JSON.parse(localStorage.getItem('cartItems'))
+	: [];
+// Init State can be used to store and get cartItems, token, user...etc
+const initialState = {
+	cart: { cartItems: cartItemsFromStorage },
+};
 const middleWare = [thunk];
 const store = createStore(
 	reducer,

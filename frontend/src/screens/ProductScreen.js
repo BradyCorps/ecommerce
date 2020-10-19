@@ -72,7 +72,10 @@ const ProductScreen = ({ history, match }) => {
 					<Col md={3}>
 						<Card>
 							<ListGroup variant="flush">
-								<ListGroup.Item disabled={product.countInStock === 0}>
+								<ListGroup.Item
+									className="zoom-hover"
+									disabled={product.countInStock === 0}
+								>
 									<Col>Price:</Col>
 									<Col>
 										<strong>${product.price}</strong>
@@ -88,7 +91,7 @@ const ProductScreen = ({ history, match }) => {
 								</ListGroup.Item>
 
 								{product.countInStock > 0 && (
-									<ListGroupItem>
+									<ListGroupItem className="title">
 										<Row>
 											<Col>Qty</Col>
 											<Col>
@@ -108,19 +111,20 @@ const ProductScreen = ({ history, match }) => {
 									</ListGroupItem>
 								)}
 
-								<ListGroup.Item disabled={product.countInStock === 0}>
+								<ListGroupItem
+									className="title"
+									disabled={product.countInStock === 0}
+								>
 									<Button
 										onClick={addToCartHandler}
-										className="btn-block"
+										className="btn-block btn-hover-color"
 										type="button"
 										disabled={product.countInStock === 0}
-										variant={
-											product.countInStock === 0 ? 'danger' : 'secondary'
-										}
+										variant={product.countInStock === 0 ? 'danger' : 'light'}
 									>
 										Add To Cart
 									</Button>
-								</ListGroup.Item>
+								</ListGroupItem>
 							</ListGroup>
 						</Card>
 					</Col>
