@@ -42,7 +42,7 @@ const ProductScreen = ({ history, match }) => {
 				<Message variant="danger">{error}</Message>
 			) : (
 				<Row>
-					<Col className="mr-3" md={8}>
+					<Col className="mr-3 ml-3" md={8}>
 						<div>
 							<Image src={product.image} alt={product.name} fluid></Image>
 						</div>

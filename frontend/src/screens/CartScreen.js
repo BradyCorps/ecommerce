@@ -106,7 +106,7 @@ const CartScreen = ({ match, location, history }) => {
 				)}
 			</Col>
 			<Col md={4}>
-				<Card>
+				<Card className="mt-4">
 					<ListGroup variant="flush">
 						<ListGroup.Item className="align title">
 							{/* Reduce takes in arrow function with accumulator and current item

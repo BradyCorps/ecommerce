@@ -8,10 +8,10 @@ const Header = () => {
 			<Navbar bg="secondary" variant="dark" expand="lg" collapseOnSelect>
 				<Container>
 					<LinkContainer to="/">
-						<Navbar.Brand>Brady Corps Studio</Navbar.Brand>
+						<Navbar.Brand className="brand">Brady Corps Studio</Navbar.Brand>
 					</LinkContainer>
 
-					<Nav className="ml-auto">
+					<Nav className="navbar-media">
 						<LinkContainer to="/">
 							<Nav.Link className="px-2">
 								<i className="fas fa-home px-1"></i>Home

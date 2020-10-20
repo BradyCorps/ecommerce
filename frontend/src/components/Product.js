@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import Rating from './Rating';
 
-//  className="image-wrapper"
-
 const Product = ({ product }) => {
 	return (
 		<Card className="rounded">
