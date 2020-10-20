@@ -1,5 +1,12 @@
 main {
 	min-height: 80vh;
+	overflow: hidden;
+}
+
+.main-title {
+	font-size: 2.2rem;
+	margin-bottom: 3rem;
+	text-align: center;
 }
 
 h1 {
@@ -21,19 +28,16 @@ h2 {
 }
 h3 {
 	padding: 1rem 0;
+	text-transform: uppercase;
 }
 
 .rating span {
 	margin: 0.1rem;
 }
 
-.image-container {
-	height: auto;
-	width: 100%;
-}
-
 .image-wrapper {
-	border: 2px solid rgb(65, 67, 82);
+	border: 2px solid rgb(81, 81, 87);
+	box-shadow: 2px 1px 5px rgba(255, 255, 255, 0.151);
 }
 
 .title:hover {
@@ -46,8 +50,37 @@ h3 {
 	background-color: rgb(23, 55, 71);
 }
 
+.zoom-hover {
+	transition: 0.5s;
+}
+
 .zoom-hover:hover {
 	color: white;
 	font-size: 1.6rem;
-	transition: all 0.5s ease-in-out;
+}
+
+/* Custom Card */
+
+.card {
+	cursor: pointer;
+	min-width: 200px;
+	padding: 0.6rem;
+	box-shadow: -1rem 0 2rem rgb(19, 19, 19);
+	transition: 0.5s;
+	position: relative;
+}
+
+.card:hover {
+	transform: translateY(-1.5rem);
+}
+
+.card:hover ~ .card {
+	transform: translateX(100px);
+}
+
+/* Image display */
+
+.image-display {
+	height: auto;
+	width: 1500px;
 }

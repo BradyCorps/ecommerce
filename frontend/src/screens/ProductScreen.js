@@ -42,32 +42,10 @@ const ProductScreen = ({ history, match }) => {
 				<Message variant="danger">{error}</Message>
 			) : (
 				<Row>
-					<Col md={6}>
+					<Col className="mr-3" md={8}>
 						<div>
 							<Image src={product.image} alt={product.name} fluid></Image>
 						</div>
-					</Col>
-					<Col md={3}>
-						<ListGroup variant="flush">
-							<ListGroup.Item>
-								<h3>{product.name}</h3>
-							</ListGroup.Item>
-							<ListGroup.Item>
-								<Rating
-									value={product.rating}
-									text={`${product.numReviews} reviews`}
-								/>
-							</ListGroup.Item>
-							<ListGroup.Item disabled={product.countInStock === 0}>
-								Price: ${product.price}
-							</ListGroup.Item>
-							<ListGroup.Item>
-								<Row>
-									<strong>Description:</strong>
-								</Row>
-								<Row className="mt-4">{product.description}</Row>
-							</ListGroup.Item>
-						</ListGroup>
 					</Col>
 					<Col md={3}>
 						<Card>
@@ -127,6 +105,25 @@ const ProductScreen = ({ history, match }) => {
 								</ListGroupItem>
 							</ListGroup>
 						</Card>
+					</Col>
+					<Col md={3}>
+						<ListGroup variant="flush">
+							<ListGroup.Item>
+								<h3>{product.name}</h3>
+							</ListGroup.Item>
+							<ListGroup.Item>
+								<Rating
+									value={product.rating}
+									text={`${product.numReviews} reviews`}
+								/>
+							</ListGroup.Item>
+							<ListGroup.Item>
+								<Row>
+									<strong>Description:</strong>
+								</Row>
+								<Row className="mt-4">{product.description}</Row>
+							</ListGroup.Item>
+						</ListGroup>
 					</Col>
 				</Row>
 			)}
