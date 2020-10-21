@@ -10,7 +10,7 @@ import CartScreen from './screens/CartScreen';
 const App = () => {
 	return (
 		<Router>
-			<Header className="navbar-media" />
+			<Header />
 			<main className="py-3">
 				<Container>
 					<Route path="/" component={HomeScreen} exact />

@@ -70,18 +70,6 @@ h3 {
 	position: relative;
 }
 
-@media screen and (max-width: 600px) {
-	.card {
-		margin: 1rem;
-	}
-}
-
-@media screen and (max-width: 450px) {
-	.brand {
-		display: none;
-	}
-}
-
 .card:hover {
 	transform: translateY(-1.5rem);
 }
